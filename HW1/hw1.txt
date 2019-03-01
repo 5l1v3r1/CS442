@@ -1,0 +1,13 @@
+Write a small report (do not exceed 2 pages), answering the following questions:
+
+1. What is the difference between authentication and authorization?
+
+2. What is public key cryptography? (read http://en.0wikipedia.org/wiki/Public-key_cryptography)?
+
+3. Consider a distributed system that supports RSA keys for authentication. For this purpose, you can use ssh on a Unix-based system. Normally, you login to the system using a password. Describe the steps needed to login using public key cryptography. The general idea is the following:
+	1. Create a public/private key pair for yourself
+	2. Login to the server via ssh as usual and put your public key to the authorized_keys list
+	3. Log out and login again without entering a password
+	Note: In your report you should describe:
+	The details of the above listed steps (you can add more steps if you like)
+	The description of how authentication works (what the client does and what the server does, at a high level)
