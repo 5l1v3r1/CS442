@@ -1,0 +1,9 @@
+Answer the following:
+
+What is astronomical time versus atomic time?
+What are leap seconds?
+Why do we need leap seconds?
+What are the pros and cons of leap seconds?
+What happens to the Unix time on leap seconds?
+What happens to UTC on leap seconds?
+Read the article: "One Second War". Provide a one paragraph summary of it.

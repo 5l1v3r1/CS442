@@ -1,0 +1,96 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage{fullpage}
+\usepackage[top=2cm, bottom=4.0cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage{amsmath,amsthm,amsfonts,amssymb,amscd}
+\usepackage{lastpage}
+\usepackage{enumerate}
+\usepackage{fancyhdr}
+\usepackage{mathrsfs}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage{hyperref}
+
+\usepackage{xcolor}
+\usepackage{listings}
+\lstset{basicstyle=\ttfamily,
+  showstringspaces=false,
+  commentstyle=\color{red},
+  keywordstyle=\color{blue}
+}
+
+\hypersetup{%
+  colorlinks=true,
+  urlcolor=blue,
+  linkcolor=blue,
+  linkbordercolor={0 0 1}
+}
+ 
+\renewcommand\lstlistingname{Algorithm}
+\renewcommand\lstlistlistingname{Algorithms}
+\def\lstlistingautorefname{Alg.}
+
+\setlength{\parindent}{0.0in}
+\setlength{\parskip}{0.05in}
+
+% Edit these as appropriate
+\newcommand\course{CS 442}
+\newcommand\hwnumber{2}                  % <-- homework number
+\newcommand\NetIDa{Boran YILDIRIM}           % <-- NetID of person #1
+\newcommand\NetIDb{21401947}           % <-- NetID of person #2 (Comment this line out for problem sets)
+
+\pagestyle{fancyplain}
+\headheight 35pt
+\lhead{\NetIDa}
+\lhead{\NetIDa\\\NetIDb}                 % <-- Comment this line out for problem sets (make sure you are person #1)
+\chead{\textbf{\Large Homework \hwnumber}}
+\rhead{\course \\ \today}
+\lfoot{}
+\cfoot{}
+\rfoot{\small\thepage}
+\headsep 1.5em
+
+\begin{document}
+
+\section*{Question 1}
+
+\textbf{\textit{What is astronomical time versus atomic time?}}
+
+Astronomical time is based on the recurrence of astronomical events to set frequency standards. Day and night, and seasons are some examples of astronomical time and caused by the rotation of the Earth around the Sun. It is a non-uniform time since the speed of the Earth and its distance to the Sun are not static. 
+
+Atomic time is based on the frequency of atomic oscillations. It uses the vibrational frequency of \textit{caesium} atom. It is a very stable time standard so it is used by humans to determine exact time with seconds.
+
+\section*{Question 2}
+\textbf{\textit{What are leap seconds?}} 
+
+Leap second is a one second arrangement which is sometimes inserted into the atomic time to synchronize it with solar time. 
+
+\section*{Question 3}
+\textbf{\textit{Why do we need leap seconds?}} 
+
+Because of the Earth's rotational irregularities, Coordinated Universal Time (UTC) is need to be synchronized with mean solar time at Greenwich. 
+
+\section*{Question 4}
+\textbf{\textit{What are the pros and cons of leap seconds?}}
+
+\textbf{Pros:} the sun will at its highest point overhead at 12 noon every day, better timing of certain religious events 
+
+\textbf{Cons:} computer programs can create software bugs, cost of synchronizing all atomic clocks around the world 
+
+
+\section*{Question 5}
+\textbf{\textit{What happens to the Unix time on leap seconds?}} 
+
+Unix fixes the number of seconds per day and it increases its time by exactly 86400 per day since the epoch. It checks everyday if it contains exactly 86400 seconds, so leap seconds are subtracted since the epoch.
+
+\section*{Question 6}
+\textbf{\textit{What happens to UTC on leap seconds?}} 
+
+One second is inserted between second \textit{23:59:59} of a chosen UTC calendar date and second \textit{00:00:00} of the following date. 
+
+\section*{Question 7}
+\textbf{\textit{One paragraph summary of the article: \href{https://cacm.acm.org/magazines/2011/5/107699-the-one-second-war/fulltext}{"One Second War"}}} 
+
+Timekeeping used to be astronomers' work, and the trouble it caused was very academic. To the rural population, sunrise, midday, and sunset were plenty precise for all relevant purposes. A new time scale was created to count 9,192,631,770 periods of hyperfine radiation from a \textit{caesium-133} atom as a second. Having variable-length seconds did not work for anybody so in 1970 it was decided to use SI (International System of Units) seconds and do full-second step adjustments--leap seconds--starting January 1, 1972. Until the advent of big synchronized networks of computers, leap seconds bothered nobody. Therefore, Unix didn't bother with leap seconds. In the \textit{time\_t} definition from Unix, all minutes have 60 seconds, all hours 3,600 seconds, and all days 86,400 seconds. The December 2005 leap second came but it was painfully obvious to everybody who paid attention that there were massive amounts of software that needed fixing. The problem is that more systems care about time at the second level. Technically, there is no problem with leap seconds that the IT professionals cannot tolerate. They just have to make sure that all computers know about leap seconds and that all programs, operating systems, and applications know how to deal with them. Leap seconds are not a viable long-term solution because the earth's rotation is not constant and leads to a quadratic difference between earth rotation and atomic time. If IT professionals know when leap seconds are to occur 20 years in advance, they can code them into tables in the operating systems, and suddenly 99.9\% of the computers will do the right thing when leap seconds happen, because they know when they will happen. Proposal TF-460-7 to abolish leap seconds will come up for plenary vote at the ITU-R in January 2012, and if it, modulo amendments, collects a supermajority of 70\% of the votes, leap seconds would cease beginning in approximately 2018. If the proposal fails to gain 70\% of the votes, then leap seconds will continue, and IT professionals had better start fixing computers to deal properly, or at least more predictably, with them.
+
+\end{document}
