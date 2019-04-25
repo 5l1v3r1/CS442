@@ -1,0 +1,10 @@
+Read one the following papers:
+
+Leslie Lamport, “The Part-Time Parliament”, ACM Transactions on Computer Systems (TOCS), 16(2), pp. 133-169, May 1998.
+Diego Ongaro, John Ousterhout, “In search of an understandable consensus algorithm”, USENIX Annual Technical Conference, 305-320, 2014.
+
+Briefly summarize:
+
+	What Paxos/Raft algorithm is
+	How it works (at a high level)
+	What real-world problems can be solved using it
